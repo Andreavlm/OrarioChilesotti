@@ -22,41 +22,47 @@ use App\Models\Ora;
 |
 */
 
-//Tabelle semplici
+//per le aule
+$router->get('/aule', ['uses' => 'AulaController@index']);
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+
+
+//per le ore
+$router->get('/ore', ['uses' => 'OraController@index']);
+
+// $router->get('/', function () use ($router) {
+//     return $router->app->version();
+// });
 
     
-$router->get('/lezioni', function() {
-    return response()->json(Lezione::all());
-   });
+// $router->get('/lezioni', function() {
+//     return response()->json(Lezione::all());
+//    });
+   
+//    $router->get('/aule', function() {
+//     return response()->json(Aula::all());
+//    });
 
-$router->get('/aule', function() {
-    return response()->json(Aula::all());
-   });
+// $router->get('/docenti', function() {
+//     return response()->json(Docente::all());
+//    });
 
-$router->get('/docenti', function() {
-    return response()->json(Docente::all());
-   });
+// $router->get('/materie', function() {
+//     return response()->json(Materia::all());
+//    });
 
-$router->get('/materie', function() {
-    return response()->json(Materia::all());
-   });
+// $router->get('/sedi', function() {
+//     return response()->json(Sede::all());
+//    });
 
-$router->get('/sedi', function() {
-    return response()->json(Sede::all());
-   });
+// $router->get('/giorni', function() {
+//     return response()->json(Giorno::all());
+//    });
 
-$router->get('/giorni', function() {
-    return response()->json(Giorno::all());
-   });
+// $router->get('/classi', function() {
+//     return response()->json(Classe::all());
+//    });
 
-$router->get('/classi', function() {
-    return response()->json(Classe::all());
-   });
-
-$router->get('/ore', function() {
-    return response()->json(Ora::all());
-   });
+// $router->get('/ore', function() {
+//     return response()->json(Ora::all());
+//    });
