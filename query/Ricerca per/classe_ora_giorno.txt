@@ -1,0 +1,3 @@
+SELECT giorni.nomegiorno, ore.orainizio, ore.orafine, sedi.nomesede
+FROM ((((classi NATURAL JOIN classilezioni) NATURAL JOIN lezioni) NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN sedi
+WHERE classi.nomeclasse="2E" AND giorni.nomegiorno="MAR" AND ore.orainizio="8.35";

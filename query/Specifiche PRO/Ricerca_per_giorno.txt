@@ -1,0 +1,1 @@
+SELECT docenti.nomedocente FROM classilezioni, lezioni, classi, docenti, docentilezioni WHERE classi.nomeclasse="2H" AND lezioni.idgiorno=0 AND lezioni.idora=0 AND classi.idclasse=classilezioni.idclasse AND classilezioni.idlezione=lezioni.idlezione AND lezioni.idlezione=docentilezioni.idlezione AND docentilezioni.iddocente=docenti.iddocente;

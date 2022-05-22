@@ -1,0 +1,4 @@
+SELECT aule.nomeaula /*, aulelezioni.idlezione, lezioni.idgiorno*/ /*per controllare che i valori siano null rimuovere il commento*/
+FROM (aule LEFT JOIN aulelezioni on aule.idaula=aulelezioni.idaula) LEFT JOIN lezioni ON aulelezioni.idlezione=lezioni.idlezione
+WHERE aulelezioni.idlezione IS NULL
+ORDER BY aulelezioni.idaula, aulelezioni.idlezione, lezioni.idgiorno

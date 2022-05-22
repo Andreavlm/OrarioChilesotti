@@ -1,0 +1,3 @@
+SELECT classi.nomeclasse, docenti.nomedocente, aule.nomeaula, ore.orainizio, ore.orafine, giorni.nomegiorno, materie.nomemateria, sedi.nomesede
+FROM ((((((((lezioni NATURAL JOIN (classi NATURAL JOIN classilezioni)) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN aulelezioni) NATURAL JOIN aule) NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN materie) NATURAL JOIN sedi
+ORDER BY classi.nomeclasse, giorni.idgiorno, ore.idora;

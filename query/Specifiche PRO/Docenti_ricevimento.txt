@@ -1,0 +1,4 @@
+SELECT docenti.nomedocente, docentilezioni.idlezione, materie.nomemateria, ore.orainizio, ore.orafine, giorni.nomegiorno
+FROM ((((lezioni NATURAL JOIN materie) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN ore) NATURAL JOIN giorni
+WHERE materie.nomemateria="RICEVIMENTO GENITORI"
+ORDER by docentilezioni.idlezione;

@@ -17,4 +17,9 @@ class ClasseController extends Controller
     {
         return Classe::find($id);
     }
+
+    public function byName($name)
+    {
+        return Classe::where('nomeclasse', $name)->get();
+    }
 }

@@ -18,5 +18,9 @@ class AulaController extends Controller
         return Aula::find($id);
     }
 
+    public function byName($name)
+    {
+        return Aula::where('nomeaula', $name)->get();
+    }
   
 }

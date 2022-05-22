@@ -17,4 +17,12 @@ class DocenteController extends Controller
     {
         return Docente::find($id);
     }
+
+
+    public function byName($name)
+    {
+        return Docente::where('nomedocente', $name)->get();
+    }
+
+
 }

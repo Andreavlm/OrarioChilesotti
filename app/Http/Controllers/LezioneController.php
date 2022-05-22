@@ -18,4 +18,24 @@ class LezioneController extends Controller
     {
         return Lezione::find($id);
     }
+
+
+ //public function perDocente($nome){
+
+ //    return  DB::select("SELECT *
+ //    FROM (((((lezioni NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN classilezioni) NATURAL JOIN classi
+ //    WHERE docenti.nomedocente LIKE "%$nome%" ;");
+
+
+
+ //}
+
+  // public function perAula($id){
+
+  // }
+
+  // public function perClasse($id){
+
+  // }
+
 }

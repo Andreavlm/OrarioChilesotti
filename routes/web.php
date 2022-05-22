@@ -83,3 +83,13 @@ $router->get('/docenti/{id}', ['uses' => 'DocenteController@show']);
 $router->get('/lezioni/{id}', ['uses' => 'LezioneController@show']);
 $router->get('/classi/{id}', ['uses' => 'ClasseController@show']);
 $router->get('/sedi/{id}', ['uses' => 'SedeController@show']);
+
+
+
+$router->get('/docente/nome/{name}', ['uses' => 'DocenteController@byName']);
+$router->get('/aula/nome/{name}', ['uses' => 'AulaController@byName']);
+$router->get('/classe/nome/{name}', ['uses' => 'ClasseController@byName']);
+
+$router->get('/lezioni/docente/{$nome}', ['uses' => 'LezioneController@perDocente']);
+
+
