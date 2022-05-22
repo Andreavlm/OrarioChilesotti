@@ -24,5 +24,11 @@ class DocenteController extends Controller
         return Docente::where('nomedocente', $name)->get();
     }
 
+    public function ricercapergiorno($classe,$giorno,$ora){
+
+        return  \DB::select("SELECT *
+         FROM classilezioni, lezioni, classi, docenti, docentilezioni
+          WHERE classi.nomeclasse=\"".$classe."\" AND lezioni.idgiorno=$giorno AND lezioni.idora=$ora AND classi.idclasse=classilezioni.idclasse AND classilezioni.idlezione=lezioni.idlezione AND lezioni.idlezione=docentilezioni.idlezione AND docentilezioni.iddocente=docenti.iddocente;");
+    }
 
 }

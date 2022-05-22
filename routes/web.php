@@ -90,9 +90,26 @@ $router->get('/docente/nome/{name}', ['uses' => 'DocenteController@byName']);
 $router->get('/aula/nome/{name}', ['uses' => 'AulaController@byName']);
 $router->get('/classe/nome/{name}', ['uses' => 'ClasseController@byName']);
 
-$router->get('/perDocente/{nome}', ['uses' => 'LezioneController@perDocente']);
 
+$router->get('/perDocente/{nome}', ['uses' => 'LezioneController@perDocente']);
 $router->get('/perAula/{nome}', ['uses' => 'LezioneController@perAula']);
 $router->get('/perClasse/{nome}', ['uses' => 'LezioneController@perClasse']);
 
 $router->get('/aulaLibera', ['uses' => 'AulaController@aulaLibera']);
+
+$router->get('/docentiLiberi', function(){
+    return \DB::select("SELECT docenti.nomedocente, docentilezioni.idlezione, ore.orainizio, ore.orafine, giorni.nomegiorno
+    FROM ((((lezioni NATURAL JOIN materie) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN ore) NATURAL JOIN giorni
+    WHERE materie.nomemateria=\"Disposizione\"
+    ORDER by docentilezioni.idlezione;");
+});
+
+$router->get('/ricevimenti', function(){
+    return \DB::select("SELECT docenti.nomedocente, docentilezioni.idlezione, ore.orainizio, ore.orafine, giorni.nomegiorno
+    FROM ((((lezioni NATURAL JOIN materie) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN ore) NATURAL JOIN giorni
+    WHERE materie.nomemateria=\"RICEVIMENTO GENITORI\"
+    ORDER by docentilezioni.idlezione;");
+});
+
+$router->get('/{classe}/{giorno}/{ora}', ['uses' => 'DocenteController@ricercapergiorno']);
+
