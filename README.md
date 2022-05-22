@@ -1,7 +1,9 @@
 # Orario del Chilesotti
 Questo progetto doveva essere il nostro elaborato per l'esame di stato 2021/2022 ma all' ultimo non era più necessario, la scuola però ci ha detto che dobbiamo comunque portarlo al termine
+
 Il progetto purtroppo non è stato svolto con costanza e mi sono ritrovato a concluderlo la notte prima della consegna
-Il progetto è formato da una parte di backend che restituisce dei JSON fatta usando Luemen, un generatore di qrcode(assolutamente non copia-incolato da internet) e un sito 
+
+Il progetto è formato da una parte di backend che restituisce dei JSON fatta usando Lumen, un generatore di qrcode(assolutamente non copia-incolato da internet) e un sito(ancora da concludere [e scusatemi ma ho parecchio sonno])
 
 
 
