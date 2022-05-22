@@ -15,6 +15,8 @@ class AulaController extends Controller
 
     public function show($id)
     {
-        return new AulaResource(Aula::find($id));
+        return Aula::find($id);
     }
+
+  
 }

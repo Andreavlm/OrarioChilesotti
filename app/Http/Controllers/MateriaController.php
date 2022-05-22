@@ -15,6 +15,6 @@ class MateriaController extends Controller
 
     public function show($id)
     {
-        return new MateriaResource(Materia::find($id));
+        return Materia::find($id);
     }
 }

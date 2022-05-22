@@ -15,6 +15,6 @@ class GiornoController extends Controller
 
     public function show($id)
     {
-        return new GiornoResource(Giorno::find($id));
+        return Giorno::find($id);
     }
 }

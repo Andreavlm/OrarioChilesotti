@@ -15,6 +15,6 @@ class ClasseController extends Controller
 
     public function show($id)
     {
-        return new ClasseResource(Classe::find($id));
+        return Classe::find($id);
     }
 }

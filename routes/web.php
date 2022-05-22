@@ -22,47 +22,64 @@ use App\Models\Ora;
 |
 */
 
-//per le aule
-$router->get('/aule', ['uses' => 'AulaController@index']);
+
 
 
 
 //per le ore
-$router->get('/ore', ['uses' => 'OraController@index']);
+//$router->get('/ore', ['uses' => 'OraController@index']);
 
-// $router->get('/', function () use ($router) {
-//     return $router->app->version();
-// });
 
-    
-// $router->get('/lezioni', function() {
-//     return response()->json(Lezione::all());
-//    });
-   
-//    $router->get('/aule', function() {
-//     return response()->json(Aula::all());
-//    });
+ $router->get('/', function () use ($router) {
+     return $router->app->version();
+ });
+  
+ $router->get('/lezioni', function() {
+     return response()->json(Lezione::all());
+    });
+ 
+  $router->get('/aule', function() {
+   return response()->json(Aula::all());
+  });
+ $router->get('/docenti', function() {
+     return response()->json(Docente::all());
+    });
+ $router->get('/materie', function() {
+     return response()->json(Materia::all());
+    });
+ $router->get('/sedi', function() {
+     return response()->json(Sede::all());
+    });
+ $router->get('/giorni', function() {
+     return response()->json(Giorno::all());
+    });
+ $router->get('/classi', function() {
+     return response()->json(Classe::all());
+    });
+ $router->get('/ore', function() {
+     return response()->json(Ora::all());
+    });
 
-// $router->get('/docenti', function() {
-//     return response()->json(Docente::all());
-//    });
+    //per le aule
+$router->get('/aule/{id}', ['uses' => 'AulaController@show']);
 
-// $router->get('/materie', function() {
-//     return response()->json(Materia::all());
-//    });
+//$router->get('/aule/{id}',
+//function ($id)
+//{
+// return Aula::find($id);
+//});
 
-// $router->get('/sedi', function() {
-//     return response()->json(Sede::all());
-//    });
 
-// $router->get('/giorni', function() {
-//     return response()->json(Giorno::all());
-//    });
 
-// $router->get('/classi', function() {
-//     return response()->json(Classe::all());
-//    });
 
-// $router->get('/ore', function() {
-//     return response()->json(Ora::all());
-//    });
+
+$router->get('/aula/{id}', ['uses' => 'AulaController@show']);
+$router->get('/docente/{id}', ['uses' => 'DocenteController@show']);
+$router->get('/lezione/{id}', ['uses' => 'LezioneController@show']);
+$router->get('/classe/{id}', ['uses' => 'ClasseController@show']);
+$router->get('/sede/{id}', ['uses' => 'SedeController@show']);
+
+$router->get('/docenti/{id}', ['uses' => 'DocenteController@show']);
+$router->get('/lezioni/{id}', ['uses' => 'LezioneController@show']);
+$router->get('/classi/{id}', ['uses' => 'ClasseController@show']);
+$router->get('/sedi/{id}', ['uses' => 'SedeController@show']);

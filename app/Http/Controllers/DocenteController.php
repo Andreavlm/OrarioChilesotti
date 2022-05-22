@@ -15,6 +15,6 @@ class DocenteController extends Controller
 
     public function show($id)
     {
-        return new DocenteResource(Docente::find($id));
+        return Docente::find($id);
     }
 }

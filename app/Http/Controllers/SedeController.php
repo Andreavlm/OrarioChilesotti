@@ -15,6 +15,6 @@ class SedeController extends Controller
 
     public function show($id)
     {
-        return new SedeResource(Sede::find($id));
+        return Sede::find($id);
     }
 }

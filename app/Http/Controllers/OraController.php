@@ -16,6 +16,6 @@ class OraController extends Controller
 
     public function show($id)
     {
-        return new OraResource(Ora::find($id));
+        return Ora::find($id);
     }
 }

@@ -16,6 +16,6 @@ class LezioneController extends Controller
 
     public function show($id)
     {
-        return new LezioneResource(Lezione::find($id));
+        return Lezione::find($id);
     }
 }
