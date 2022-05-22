@@ -20,22 +20,24 @@ class LezioneController extends Controller
     }
 
 
- //public function perDocente($nome){
+ public function perDocente($nome){
+     return  \DB::select("SELECT *
+     FROM (((((lezioni NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN classilezioni) NATURAL JOIN classi
+     WHERE docenti.nomedocente like\"%".$nome."%\" ;");
+ }
 
- //    return  DB::select("SELECT *
- //    FROM (((((lezioni NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN classilezioni) NATURAL JOIN classi
- //    WHERE docenti.nomedocente LIKE "%$nome%" ;");
 
+ 
 
+   public function perAula($nome){
+    return  \DB::select("SELECT * FROM (((((((lezioni NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN classilezioni) NATURAL JOIN classi) NATURAL JOIN sedi) NATURAL JOIN aulelezioni NATURAL JOIN aule 
+    WHERE aule.nomeaula=\"".$nome."\";");
+   }
 
- //}
-
-  // public function perAula($id){
-
-  // }
-
-  // public function perClasse($id){
-
-  // }
+   public function perClasse($nome){
+    return  \DB::select("SELECT *
+    FROM ((((classi NATURAL JOIN classilezioni) NATURAL JOIN lezioni) NATURAL JOIN ore) NATURAL JOIN giorni) NATURAL JOIN sedi
+    WHERE classi.nomeclasse=\"".$nome."\" ;");
+   }
 
 }

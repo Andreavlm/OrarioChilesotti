@@ -90,6 +90,9 @@ $router->get('/docente/nome/{name}', ['uses' => 'DocenteController@byName']);
 $router->get('/aula/nome/{name}', ['uses' => 'AulaController@byName']);
 $router->get('/classe/nome/{name}', ['uses' => 'ClasseController@byName']);
 
-$router->get('/lezioni/docente/{$nome}', ['uses' => 'LezioneController@perDocente']);
+$router->get('/perDocente/{nome}', ['uses' => 'LezioneController@perDocente']);
 
+$router->get('/perAula/{nome}', ['uses' => 'LezioneController@perAula']);
+$router->get('/perClasse/{nome}', ['uses' => 'LezioneController@perClasse']);
 
+$router->get('/aulaLibera', ['uses' => 'AulaController@aulaLibera']);
