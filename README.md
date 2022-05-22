@@ -22,14 +22,26 @@ Giovanni Miraglia
 
 # URL per le risposte
 Questi permettono di risalire a tutti i dati di un determinato elemento
+
 /perDocente/{nome}
+
 /perAula/{nome}
+
 /perClasse/{nome}
 
+
+
 Queste sono autoesplicative
+
 /aulaLibera
+
 /docentiLiberi
+
 /ricevimenti
 
+
+
+
 Questa permette di risalire a tutti i dati di una classe in una determinata ora 
+
 /{classe}/{giorno}/{ora}
