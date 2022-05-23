@@ -115,9 +115,8 @@
 
     <section class="home">
         <div class="text">
-            <h1>HOME</h1><br><br>
-            <p>Questo doveva essere il nostro elaborato per l'esame di stato 2021/2022</p><br>
-            <p>Il codice completo del progetto si può trovare su <a href="https://github.com/Andreavlm/OrarioChilesotti">GitHub</a></p>
+            <h1>AULE</h1><br><br>
+            
         </div>
     </section>
 

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-  <!-- Coding by CodingLab | www.codinglabweb.com -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +11,20 @@
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     
+    <?php
+    if(!isset($_COOKIE["darkmode"])) {
+        if($_COOKIE["darkmode"] == "true") {
+            echo "<script>";
+            echo "body.classList.toggle('dark');";
+            echo "if(body.classList.contains('dark')){";
+            echo "    modeText.innerText = 'Light mode';";
+            echo "}else{";
+            echo "    modeText.innerText = 'Dark mode'";
+            echo "</script>";
+        }
+    }
+    ?>
+
     <!--<title>Dashboard Sidebar Menu</title>--> 
 </head>
 <body>
@@ -34,10 +47,6 @@
         <div class="menu-bar">
             <div class="menu">
 
-                <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Cerca...">
-                </li>
 
                 <ul class="menu-links">
                     <li class="nav-link">
@@ -48,9 +57,9 @@
                     </li>
 
                     <li class="nav-link">
-                        <a href="#">
+                        <a href="aule.php">
                             <i class='bx bxs-institution icon' ></i>
-                            <span class="text nav-text">Classi</span>
+                            <span class="text nav-text">Aule</span>
                         </a>
                     </li>
 
@@ -58,6 +67,20 @@
                         <a href="insegnanti.php">
                             <i class='bx bx-male-female icon'></i>
                             <span class="text nav-text">Insegnanti</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="classi.php">
+                            <i class='bx bxs-book-content icon'></i>
+                            <span class="text nav-text">Classi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="query.php">
+                            <i class='bx bxs-data icon' ></i>
+                            <span class="text nav-text">Query</span>
                         </a>
                     </li>
 
@@ -92,15 +115,8 @@
 
     <section class="home">
         <div class="text">
-            <h1>CLASSI</h1>
-            <?php
-            $json = file_get_contents('sitoServer');
-            $data = json_decode($json);
-            echo "<ul class='listaClassi'>";
-            for($i = 0; $i < count($data); $i++) {
-                echo "<li><a href=#>"
-            }
-            ?>
+            <h1>CLASSI</h1><br><br>
+            
         </div>
     </section>
 
@@ -130,6 +146,7 @@ modeSwitch.addEventListener("click" , () =>{
         modeText.innerText = "Dark mode";
         
     }
+
 });
     </script>
 
