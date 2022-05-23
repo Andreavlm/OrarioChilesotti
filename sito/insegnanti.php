@@ -122,7 +122,12 @@
 
            echo Foo::jsonToDebug($jsonText);
            
-           ?>
+           ?> <li class="search-box">
+                    
+                    
+                    
+                    
+           </li>
         </div>
     </section>
 

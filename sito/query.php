@@ -143,6 +143,24 @@
                     
                 </li>
                 </form>
+                <form action="docente.php" method="get">
+                    <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    
+                    <input type="text" placeholder="Cerca per nome docente..." name="nome">
+                    <input type="submit" value="Invia">
+                    
+                </li>
+                </form>
+                <form action="sezione.php" method="get">
+                    <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    
+                    <input type="text" placeholder="Cerca per nome classe..." name="nome">
+                    <input type="submit" value="Invia">
+                    
+                </li>
+                </form>
         </div>
     </section>
 
