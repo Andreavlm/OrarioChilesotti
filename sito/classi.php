@@ -115,11 +115,12 @@
 
     <section class="home">
         <div class="text">
+            
             <h1>CLASSI</h1><br><br>
             
 
            <?php include_once("stampa.php");
-           
+
            $jsonText = '[{"nomeclasse":"1A"},{"nomeclasse":"1B"},{"nomeclasse":"1C"},{"nomeclasse":"1D"},{"nomeclasse":"1E"},{"nomeclasse":"1F"},{"nomeclasse":"1G"},{"nomeclasse":"1H"},{"nomeclasse":"2A"},{"nomeclasse":"2B"},{"nomeclasse":"2C"},{"nomeclasse":"2D"},{"nomeclasse":"2E"},{"nomeclasse":"2F"},{"nomeclasse":"2G"},{"nomeclasse":"2H"},{"nomeclasse":"3A-A"},{"nomeclasse":"3A-B"},{"nomeclasse":"3E-A"},{"nomeclasse":"3I-A"},{"nomeclasse":"3I-B"},{"nomeclasse":"3I-C"},{"nomeclasse":"3I-D"},{"nomeclasse":"3L-A"},{"nomeclasse":"4A-A"},{"nomeclasse":"4A-B"},{"nomeclasse":"4EL-M"},{"nomeclasse":"4I-A"},{"nomeclasse":"4I-B"},{"nomeclasse":"4I-C"},{"nomeclasse":"4L-A"},{"nomeclasse":"5A-A"},{"nomeclasse":"5A-B"},{"nomeclasse":"5AI-M"},{"nomeclasse":"5I-A"},{"nomeclasse":"5I-B"},{"nomeclasse":"5I-C"},{"nomeclasse":"5L-A"},{"nomeclasse":"5L-B"},{"nomeclasse":"4E-M"},{"nomeclasse":"4L-M"},{"nomeclasse":"5A-M"},{"nomeclasse":"5I-M"}]';
 
            echo Foo::jsonToDebug($jsonText);

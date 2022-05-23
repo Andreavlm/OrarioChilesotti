@@ -115,34 +115,22 @@
 
     <section class="home">
         <div class="text">
-            <h1>QUERY</h1><br><br>
-            <li class="nav-link">
-                        <a href="aulelibere.php">
-                        <i class='bx bxs-buildings icon'></i>
-                            <span class="text nav-text">Aule Libere</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="docentiliberi.php">
-                        <i class='bx bx-street-view icon'></i>
-                            <span class="text nav-text">Docenti Liberi</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="ricevimenti.php">
-                        <i class='bx bxs-face icon' ></i>
-                            <span class="text nav-text">Ricevimenti</span>
-                        </a>
-                    </li>
-                    <form action="aula.php" method="get">
-                    <li class="search-box">
-                    <i class='bx bx-search icon'></i>
-                    
-                    <input type="text" placeholder="Cerca per nome aula..." name="nome">
-                    <input type="submit" value="Invia">
-                    
-                </li>
-                </form>
+
+<?php
+isset($_REQUEST["nome"]) ? $nome = $_REQUEST["nome"] : $id = "";
+
+?>
+
+            <h1> ORARIO DELL' AULA <?=$nome?></h1><br><br>
+            <?php include_once("stampa.php");
+           
+           //$jsonText = '[{"idaula":"A0000","nomeaula":"2"},{"idaula":"A0001","nomeaula":"30"},{"idaula":"A0002","nomeaula":"30bis"},{"idaula":"A0003","nomeaula":"34"},{"idaula":"A0004","nomeaula":"35"},{"idaula":"A0005","nomeaula":"36"},{"idaula":"A0006","nomeaula":"37"},{"idaula":"A0007","nomeaula":"38"},{"idaula":"A0008","nomeaula":"40"},{"idaula":"A0009","nomeaula":"41"},{"idaula":"A0010","nomeaula":"45"},{"idaula":"A0011","nomeaula":"46"},{"idaula":"A0012","nomeaula":"47"},{"idaula":"A0013","nomeaula":"49"},{"idaula":"A0014","nomeaula":"50"},{"idaula":"A0015","nomeaula":"51"},{"idaula":"A0016","nomeaula":"53"},{"idaula":"A0017","nomeaula":"54"},{"idaula":"A0018","nomeaula":"55"},{"idaula":"A0019","nomeaula":"56"},{"idaula":"A0020","nomeaula":"64"},{"idaula":"A0021","nomeaula":"65"},{"idaula":"A0022","nomeaula":"66"},{"idaula":"A0023","nomeaula":"68"},{"idaula":"A0024","nomeaula":"69"},{"idaula":"A0025","nomeaula":"70"},{"idaula":"A0026","nomeaula":"72"},{"idaula":"A0027","nomeaula":"73"},{"idaula":"A0028","nomeaula":"74"},{"idaula":"A0029","nomeaula":"76"},{"idaula":"A0030","nomeaula":"77"},{"idaula":"A0031","nomeaula":"78"},{"idaula":"A0032","nomeaula":"79"},{"idaula":"A0033","nomeaula":"8"},{"idaula":"A0034","nomeaula":"Disposizioni Sede Centrale"},{"idaula":"A0035","nomeaula":"Disposizioni Sede Staccata"},{"idaula":"A0036","nomeaula":"Lab Automazione"},{"idaula":"A0037","nomeaula":"Lab Chimica"},{"idaula":"A0038","nomeaula":"Lab Disegno"},{"idaula":"A0039","nomeaula":"Lab Elettronica"},{"idaula":"A0040","nomeaula":"Lab Fisica"},{"idaula":"A0041","nomeaula":"Lab Informatica"},{"idaula":"A0042","nomeaula":"Lab Logistica"},{"idaula":"A0043","nomeaula":"Lab Sis Ele"},{"idaula":"A0044","nomeaula":"Lab Sis Inf"},{"idaula":"A0045","nomeaula":"Lab TPSEE"},{"idaula":"A0046","nomeaula":"Lab.InAula"},{"idaula":"A0047","nomeaula":"Palestra Ceccato 1"},{"idaula":"A0048","nomeaula":"Palestra Ceccato 2"},{"idaula":"A0049","nomeaula":"Palestra Ceccato 3"},{"idaula":"A0050","nomeaula":"Palestra Ferrarin"},{"idaula":"A0051","nomeaula":"Palestrina"},{"idaula":"A0052","nomeaula":"Staccata1"},{"idaula":"A0053","nomeaula":"Staccata2"},{"idaula":"A0054","nomeaula":"Staccata3"},{"idaula":"A0055","nomeaula":"Staccata4"}]';
+           echo Foo::jsonToDebug($jsonText);
+           
+           ?>
+
+
+
         </div>
     </section>
 

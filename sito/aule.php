@@ -115,6 +115,9 @@
 
     <section class="home">
         <div class="text">
+
+
+
             <h1>AULE</h1><br><br>
             <?php include_once("stampa.php");
            
@@ -122,6 +125,9 @@
            echo Foo::jsonToDebug($jsonText);
            
            ?>
+
+
+
         </div>
     </section>
 
