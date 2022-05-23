@@ -23,6 +23,15 @@ Giovanni Miraglia
 
 
 # URL per le risposte
+Questi permettono di ottenere tutti i dati di una determinata table
+
+/classi
+
+/aule
+
+/docenti
+
+
 Questi permettono di risalire a tutti i dati di un determinato elemento
 
 /perDocente/{nome}
