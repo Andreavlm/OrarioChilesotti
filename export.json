@@ -1,0 +1,21 @@
+[
+{"type":"header","version":"5.1.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"raw","data":
+[
+<div class="alert alert-danger" role="alert"><h1>Errore</h1><p><strong>Query SQL:</strong>  <a href="#" class="copyQueryBtn" data-text="SELECT *
+FROM ((((lezioni NATURAL JOIN materie) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN ore) NATURAL JOIN giorni
+WHERE materie.nomemateria=&quot;Disposizione&quot;
+ORDER by docentilezioni.idlezione">Copia</a>
+<a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fselect.html" target="mysql_doc"><img src="themes/dot.gif" title="Documentazione" alt="Documentazione" class="icon ic_b_help"></a><a href="index.php?route=/table/sql&sql_query=SELECT+%2A%0D%0AFROM+%28%28%28%28lezioni+NATURAL+JOIN+materie%29+NATURAL+JOIN+docentilezioni%29+NATURAL+JOIN+docenti%29+NATURAL+JOIN+ore%29+NATURAL+JOIN+giorni%0D%0AWHERE+materie.nomemateria%3D%22Disposizione%22%0D%0AORDER+by+docentilezioni.idlezione&show_query=1&db=orariofacile&table=lezioni"><span class="nowrap"><img src="themes/dot.gif" title="Modifica" alt="Modifica" class="icon ic_b_edit">&nbsp;Modifica</span></a>    </p>
+<p>
+<code class="sql"><pre>
+SELECT *
+FROM ((((lezioni NATURAL JOIN materie) NATURAL JOIN docentilezioni) NATURAL JOIN docenti) NATURAL JOIN ore) NATURAL JOIN giorni
+WHERE materie.nomemateria=&quot;Disposizione&quot;
+ORDER by docentilezioni.idlezione
+</pre></code>
+</p>
+<p>
+    <strong>Messaggio di MySQL: </strong><a href="./url.php?url=https%3A%2F%2Fdev.mysql.com%2Fdoc%2Frefman%2F8.0%2Fen%2Fserver-error-reference.html" target="mysql_doc"><img src="themes/dot.gif" title="Documentazione" alt="Documentazione" class="icon ic_b_help"></a>
+</p>
+<code>#1046 - Nessun database selezionato</code><br></div>
