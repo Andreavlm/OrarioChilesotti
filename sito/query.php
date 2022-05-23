@@ -116,7 +116,24 @@
     <section class="home">
         <div class="text">
             <h1>QUERY PRO11!1</h1><br><br>
-            
+            <li class="nav-link">
+                        <a href="aulelibere.php">
+                        <i class='bx bxs-buildings icon'></i>
+                            <span class="text nav-text">Aule Libere</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="docentiliberi.php">
+                        <i class='bx bx-street-view icon'></i>
+                            <span class="text nav-text">Docenti Liberi</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="ricevimenti.php">
+                        <i class='bx bxs-face icon' ></i>
+                            <span class="text nav-text">Ricevimenti</span>
+                        </a>
+                    </li>
         </div>
     </section>
 
