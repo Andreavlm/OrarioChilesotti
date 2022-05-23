@@ -1,5 +1,5 @@
 # Orario del Chilesotti
-Questo progetto doveva essere il nostro elaborato per l'esame di stato 2021/2022 ma all' ultimo non era più necessario, la scuola però ci ha detto che dobbiamo comunque portarlo al termine
+Questo progetto doveva essere il nostro elaborato per l'esame di stato 2021/2022 ma all' ultimo non era più necessario
 
 Il progetto purtroppo non è stato svolto con costanza e mi sono ritrovato a concluderlo la notte prima della consegna
 
