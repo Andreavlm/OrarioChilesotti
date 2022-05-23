@@ -23,7 +23,7 @@ class AulaController extends Controller
         return Aula::where('nomeaula', $name)->get();
     }
   
-    public function aulaLibera(){
+    public function auleLibere(){
         return  \DB::select("SELECT aule.nomeaula 
         FROM (aule LEFT JOIN aulelezioni on aule.idaula=aulelezioni.idaula) LEFT JOIN lezioni ON aulelezioni.idlezione=lezioni.idlezione
         WHERE aulelezioni.idlezione IS NULL

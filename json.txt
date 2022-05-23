@@ -11,7 +11,7 @@ Questi permettono di risalire a tutti i dati di un determinato elemento
 /perClasse/{nome}
 
 Queste sono autoesplicative
-/aulaLibera
+/auleLibere
 /docentiLiberi
 /ricevimenti
 

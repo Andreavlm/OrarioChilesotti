@@ -95,7 +95,7 @@ $router->get('/perDocente/{nome}', ['uses' => 'LezioneController@perDocente']);
 $router->get('/perAula/{nome}', ['uses' => 'LezioneController@perAula']);
 $router->get('/perClasse/{nome}', ['uses' => 'LezioneController@perClasse']);
 
-$router->get('/aulaLibera', ['uses' => 'AulaController@aulaLibera']);
+$router->get('/auleLibere', ['uses' => 'AulaController@auleLibere']);
 
 $router->get('/docentiLiberi', function(){
     return \DB::select("SELECT docenti.nomedocente, docentilezioni.idlezione, ore.orainizio, ore.orafine, giorni.nomegiorno

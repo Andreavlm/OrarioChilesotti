@@ -44,7 +44,7 @@ Questi permettono di risalire a tutti i dati di un determinato elemento
 
 Queste sono autoesplicative
 
-/aulaLibera
+/auleLibere
 
 /docentiLiberi
 
